@@ -98,7 +98,7 @@ mongodb_fetch_data_parallel(
 
 This mode requires two additional parameters:
 * `value_field_name`: Character string, the name of the field containing the values to query.
-* `value_list`: A list of values to query for.
+* `value_list`: A list of values to query for per each CPU core.
 
 ```R
 mongodb_fetch_data_parallel(
@@ -114,3 +114,4 @@ mongodb_fetch_data_parallel(
 ### License
 
 This project is made available for informational purposes only. The intellectual property and source code remain the exclusive property of the author. No part of the source code may be copied, distributed, or modified without explicit permission.
+
