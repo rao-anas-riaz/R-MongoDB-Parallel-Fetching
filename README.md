@@ -56,16 +56,16 @@ This mode requires three additional parameters:
 * `date_field_name`: Character string, the name of the date field in the collection.
 * `start_date`: Date or character string, the beginning of the date range.
 * `end_date`: Date or character string, the end of the date range.
-* `date_step`: Character string, the step size (e.g., `"1 month"`).
+* `date_step`: numeric, the step size (e.g., `"10 days"`). Defined the number os days data that needs to be fetched per core.
 
 Example Call:
 ```R
 mongodb_fetch_data_parallel(
     mode = "date",
-    date_field_name = "event_date",
+    date_field_name = "date_col",
     start_date = "2024-01-01",
     end_date = "2024-12-31",
-    date_step = "1 month",
+    date_step = "10",
     collection_name = "parallel_data_extract",
     db_name = "projects",
     url = "mongodb+srv://githubuser:gituser1234@github-test-mongo-clust.rpqe46b.mongodb.net/"
@@ -78,16 +78,16 @@ This mode requires four additional parameters:
 * `numeric_field_name`: Character string, the name of the numeric field.
 * `min_value`: Numeric, the minimum value to start fetching from.
 * `max_value`: Numeric, the maximum value to fetch up to.
-* `num_step`: Numeric, the size of each numeric chunk.
+* `num_step`: Numeric, the size of each numeric chunk that needs to be fetched for each core.
 
 Example Call:
 ```R
 mongodb_fetch_data_parallel(
     mode = "numeric",
-    numeric_field_name = "user_id",
-    min_value = 1000,
-    max_value = 500000,
-    num_step = 10000,
+    numeric_field_name = "float_num_col",
+    min_value = 1,
+    max_value = 100,
+    num_step = 10,
     collection_name = "parallel_data_extract",
     db_name = "projects",
     url = "mongodb+srv://githubuser:gituser124@github-test-mongo-clust.rpqe46b.mongodb.net/"
@@ -112,4 +112,5 @@ mongodb_fetch_data_parallel(
 ```
 
 ### License
+
 This project is made available for informational purposes only. The intellectual property and source code remain the exclusive property of the author. No part of the source code may be copied, distributed, or modified without explicit permission.
