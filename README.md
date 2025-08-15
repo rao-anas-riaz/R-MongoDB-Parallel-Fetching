@@ -12,10 +12,10 @@ The `fetch_data_parallel` function is a comprehensive and resilient data profili
 
 To help users test the `mongodb_fetch_data_parallel` function, a public MongoDB database is available with read-only access. You can use the following details to connect and try out the script:
 
-* **URL**: `mongodb+srv://githubuser:gituser1234@github-test-mongo-clust.rpqe46b.mongodb.net/`
+* **URL**: `mongodb+srv://<username>:<password>@github-test-mongo-clust.rpqe46b.mongodb.net/`
 * **Database Name**: `projects`
 * **Collection Name**: `parallel_data_extract`
-* **User Permissions**: The user `githubuser` has read-only access to this specific collection, ensuring data integrity and security.
+* **User Permissions**: The user `githubuser` has read-only access to this specific collection, ensuring data integrity and security. Password for this user is `gituser1234`.
 
 When working with large databases, traditional fetching methods can be slow and often lead to system crashes due to memory limitations. Our approach addresses these challenges with three core principles:
 
@@ -114,4 +114,5 @@ mongodb_fetch_data_parallel(
 ### License
 
 This project is made available for informational purposes only. The intellectual property and source code remain the exclusive property of the author. No part of the source code may be copied, distributed, or modified without explicit permission.
+
 
